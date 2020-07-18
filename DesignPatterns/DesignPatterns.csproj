@@ -45,6 +45,11 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="State\FireMario.cs" />
+    <Compile Include="State\IEstado.cs" />
+    <Compile Include="State\Mario.cs" />
+    <Compile Include="State\SmallMario.cs" />
+    <Compile Include="State\SuperMario.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
