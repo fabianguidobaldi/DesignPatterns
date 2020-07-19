@@ -50,6 +50,13 @@
     <Compile Include="State\Mario.cs" />
     <Compile Include="State\SmallMario.cs" />
     <Compile Include="State\SuperMario.cs" />
+    <Compile Include="Strategy\Auto.cs" />
+    <Compile Include="Strategy\Avion.cs" />
+    <Compile Include="Strategy\Bici.cs" />
+    <Compile Include="Strategy\Colectivo.cs" />
+    <Compile Include="Strategy\IEstrategia.cs" />
+    <Compile Include="Strategy\Peaton.cs" />
+    <Compile Include="Strategy\Viaje.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
