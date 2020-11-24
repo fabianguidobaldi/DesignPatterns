@@ -2,6 +2,7 @@
 using DesignPatterns.State;
 using DesignPatterns.Strategy;
 using DesignPatterns.Observer;
+using DesignPatterns.Builder;
 
 namespace DesignPatterns
 {
@@ -13,6 +14,7 @@ namespace DesignPatterns
             Console.WriteLine("1. State");
             Console.WriteLine("2. Strategy");
             Console.WriteLine("3. Observer");
+            Console.WriteLine("4. Builder");
 
             Console.Write("Ingrese una opción: ");
             var opcion = Convert.ToInt32(Console.ReadLine());
@@ -27,6 +29,9 @@ namespace DesignPatterns
                     break;
                 case 3:
                     Observer();
+                    break;
+                case 4:
+                    Builder();
                     break;
                 default:
                     break;
@@ -118,5 +123,59 @@ namespace DesignPatterns
 
             Console.ReadLine();
         }
+
+        static void Builder()
+        {
+            Console.WriteLine("\n---------------- PATRÓN BUILDER ----------------\n");
+            
+            Console.WriteLine("*** Bienvenido al menú de creación de personajes ***");
+            Console.WriteLine("Por favor, seleccione su clase:");
+            Console.WriteLine("1. Guerrero");
+            Console.WriteLine("2. Mago");
+            Console.WriteLine("3. Ninja");
+
+            Console.Write("Ingrese una opción: ");
+            var opcion = Convert.ToInt32(Console.ReadLine());
+
+            IBuilder constructor = null;
+            switch (opcion)
+            {
+                case 1:
+                    constructor = new GuerreroBuilder();
+                    break;
+                case 2:
+                    constructor = new MagoBuilder();
+                    break;
+                case 3:
+                    constructor = new NinjaBuilder();
+                    break;
+                default:
+                    break;
+            };
+
+            Director director = new Director(constructor);
+
+            Console.Write("Ingrese el nombre de la armadura: ");
+            var armadura = Console.ReadLine();
+
+            Console.Write("Ingrese el nombre del arma: ");
+            var arma = Console.ReadLine();
+
+            Console.Write("Ingrese el nombre del casco: ");
+            var casco = Console.ReadLine();
+
+            Console.Write("Ingrese el nombre de los guantes: ");
+            var guantes = Console.ReadLine();
+
+            Console.Write("Ingrese el nombre de las botas: ");
+            var botas = Console.ReadLine();
+
+            director.CrearPersonaje(armadura, arma, casco, guantes, botas);
+
+            Console.WriteLine(constructor.ObtenerPersonaje().ToString());
+
+            Console.ReadLine();
+        }
     }
 }
+
