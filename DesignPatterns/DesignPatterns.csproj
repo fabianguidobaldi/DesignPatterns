@@ -52,6 +52,14 @@
     <Compile Include="Builder\GuerreroBuilder.cs" />
     <Compile Include="Builder\IBuilder.cs" />
     <Compile Include="Builder\Personaje.cs" />
+    <Compile Include="Factory Method\OrcoFactory.cs" />
+    <Compile Include="Factory Method\DragonFactory.cs" />
+    <Compile Include="Factory Method\ArañaFactory.cs" />
+    <Compile Include="Factory Method\Enemigo.cs" />
+    <Compile Include="Factory Method\Araña.cs" />
+    <Compile Include="Factory Method\Dragon.cs" />
+    <Compile Include="Factory Method\IEnemigoFactory.cs" />
+    <Compile Include="Factory Method\Orco.cs" />
     <Compile Include="Observer\Pregunta.cs" />
     <Compile Include="Observer\IObservador.cs" />
     <Compile Include="Observer\ISujeto.cs" />
@@ -77,7 +85,6 @@
   <ItemGroup>
     <Folder Include="Adapter\" />
     <Folder Include="Composite\" />
-    <Folder Include="Factory Method\" />
     <Folder Include="Template Method\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

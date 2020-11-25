@@ -3,6 +3,7 @@ using DesignPatterns.State;
 using DesignPatterns.Strategy;
 using DesignPatterns.Observer;
 using DesignPatterns.Builder;
+using DesignPatterns.Factory_Method;
 
 namespace DesignPatterns
 {
@@ -15,6 +16,7 @@ namespace DesignPatterns
             Console.WriteLine("2. Strategy");
             Console.WriteLine("3. Observer");
             Console.WriteLine("4. Builder");
+            Console.WriteLine("5. Factory Method");
 
             Console.Write("Ingrese una opción: ");
             var opcion = Convert.ToInt32(Console.ReadLine());
@@ -32,6 +34,9 @@ namespace DesignPatterns
                     break;
                 case 4:
                     Builder();
+                    break;
+                case 5:
+                    FactoryMethod();
                     break;
                 default:
                     break;
@@ -173,6 +178,43 @@ namespace DesignPatterns
             director.CrearPersonaje(armadura, arma, casco, guantes, botas);
 
             Console.WriteLine(constructor.ObtenerPersonaje().ToString());
+
+            Console.ReadLine();
+        }
+
+        static void FactoryMethod()
+        {
+            Console.WriteLine("\n---------------- PATRÓN FACTORY METHOD ----------------\n");
+
+            Console.WriteLine("Por favor, seleccione el enemigo a crear:");
+            Console.WriteLine("1. Orco");
+            Console.WriteLine("2. Dragón");
+            Console.WriteLine("3. Araña");
+
+            Console.Write("Ingrese una opción: ");
+            var opcion = Convert.ToInt32(Console.ReadLine());
+
+            IEnemigoFactory factory = null;
+            switch (opcion)
+            {
+                case 1:
+                    factory = new OrcoFactory();
+                    break;
+                case 2:
+                    factory = new DragonFactory();
+                    break;
+                case 3:
+                    factory = new ArañaFactory();
+                    break;
+                default:
+                    break;
+            };
+
+            Enemigo enemigo1 = factory.CrearEnemigo();
+            Enemigo enemigo2 = factory.CrearEnemigo(100, 100, 100);
+
+            Console.WriteLine(enemigo1.ToString());
+            Console.WriteLine(enemigo2.ToString());
 
             Console.ReadLine();
         }
