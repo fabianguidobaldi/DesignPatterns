@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="DesignPatterns.Factory_Method.Araña">
+    <Position X="2.75" Y="0.5" Width="1.5" />
+    <InheritanceLine Type="DesignPatterns.Factory_Method.Enemigo" FixedFromPoint="true">
+      <Path>
+        <Point X="2" Y="2.438" />
+        <Point X="2.375" Y="2.438" />
+        <Point X="2.375" Y="1.213" />
+        <Point X="2.75" Y="1.213" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Factory Method\Araña.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatterns.Factory_Method.ArañaFactory" BaseTypeListCollapsed="true">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>Factory Method\ArañaFactory.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Orientation="Right" Position="0.176" />
+  </Class>
+  <Class Name="DesignPatterns.Factory_Method.Dragon">
+    <Position X="2.75" Y="4.5" Width="1.5" />
+    <InheritanceLine Type="DesignPatterns.Factory_Method.Enemigo" FixedFromPoint="true">
+      <Path>
+        <Point X="2" Y="3.812" />
+        <Point X="2.375" Y="3.812" />
+        <Point X="2.375" Y="5.213" />
+        <Point X="2.75" Y="5.213" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Factory Method\Dragon.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatterns.Factory_Method.DragonFactory" BaseTypeListCollapsed="true">
+    <Position X="5.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>Factory Method\DragonFactory.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Orientation="Right" Position="0.301" />
+  </Class>
+  <Class Name="DesignPatterns.Factory_Method.Enemigo">
+    <Position X="0.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAQAAAAACgAAAAAAA=</HashCode>
+      <FileName>Factory Method\Enemigo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatterns.Factory_Method.Orco">
+    <Position X="2.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Factory Method\Orco.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatterns.Factory_Method.OrcoFactory" BaseTypeListCollapsed="true">
+    <Position X="5.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>Factory Method\OrcoFactory.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Orientation="Right" Position="0.249" />
+  </Class>
+  <Interface Name="DesignPatterns.Factory_Method.IEnemigoFactory">
+    <Position X="9.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>Factory Method\IEnemigoFactory.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

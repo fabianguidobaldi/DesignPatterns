@@ -52,6 +52,9 @@
     <Compile Include="Builder\GuerreroBuilder.cs" />
     <Compile Include="Builder\IBuilder.cs" />
     <Compile Include="Builder\Personaje.cs" />
+    <Compile Include="Composite\Cancion.cs" />
+    <Compile Include="Composite\Componente.cs" />
+    <Compile Include="Composite\Playlist.cs" />
     <Compile Include="Factory Method\OrcoFactory.cs" />
     <Compile Include="Factory Method\DragonFactory.cs" />
     <Compile Include="Factory Method\ArañaFactory.cs" />
@@ -78,14 +81,24 @@
     <Compile Include="Strategy\IEstrategia.cs" />
     <Compile Include="Strategy\Peaton.cs" />
     <Compile Include="Strategy\Viaje.cs" />
+    <Compile Include="Template Method\SandwichCheddar.cs" />
+    <Compile Include="Template Method\SandwichExtraBacon.cs" />
+    <Compile Include="Template Method\SandwichVegetariano.cs" />
+    <Compile Include="Template Method\SandwichClasico.cs" />
+    <Compile Include="Template Method\Sandwich.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="Builder\Builder.cd" />
+    <None Include="State\State.cd" />
+    <None Include="Strategy\Strategy.cd" />
+    <None Include="Template Method\Template Method.cd" />
+    <None Include="Factory Method\Factory Method.cd" />
+    <None Include="Observer\Observer.cd" />
+    <None Include="Composite\Composite.cd" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Adapter\" />
-    <Folder Include="Composite\" />
-    <Folder Include="Template Method\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

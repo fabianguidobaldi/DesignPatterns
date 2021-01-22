@@ -4,6 +4,8 @@ using DesignPatterns.Strategy;
 using DesignPatterns.Observer;
 using DesignPatterns.Builder;
 using DesignPatterns.Factory_Method;
+using DesignPatterns.Template_Method;
+using DesignPatterns.Composite;
 
 namespace DesignPatterns
 {
@@ -17,6 +19,8 @@ namespace DesignPatterns
             Console.WriteLine("3. Observer");
             Console.WriteLine("4. Builder");
             Console.WriteLine("5. Factory Method");
+            Console.WriteLine("6. Template Method");
+            Console.WriteLine("7. Composite");
 
             Console.Write("Ingrese una opción: ");
             var opcion = Convert.ToInt32(Console.ReadLine());
@@ -37,6 +41,12 @@ namespace DesignPatterns
                     break;
                 case 5:
                     FactoryMethod();
+                    break;
+                case 6:
+                    TemplateMethod();
+                    break;
+                case 7:
+                    Composite();
                     break;
                 default:
                     break;
@@ -215,6 +225,83 @@ namespace DesignPatterns
 
             Console.WriteLine(enemigo1.ToString());
             Console.WriteLine(enemigo2.ToString());
+
+            Console.ReadLine();
+        }
+
+        static void TemplateMethod()
+        {
+            Console.WriteLine("\n---------------- PATRÓN TEMPLATE METHOD ----------------\n");
+
+            Console.WriteLine("Por favor, seleccione el sandwich a preparar:");
+            Console.WriteLine("1. Sandwich clásico");
+            Console.WriteLine("2. Sandwich extra bacon");
+            Console.WriteLine("3. Sandwich con cheddar");
+            Console.WriteLine("4. Sandwich vegetariano");
+
+            Console.Write("Ingrese una opción: ");
+            var opcion = Convert.ToInt32(Console.ReadLine());
+
+            Sandwich sandwich = null;
+            switch (opcion)
+            {
+                case 1:
+                    sandwich = new SandwichClasico();
+                    break;
+                case 2:
+                    sandwich = new SandwichExtraBacon();
+                    break;
+                case 3:
+                    sandwich = new SandwichCheddar();
+                    break;
+                case 4:
+                    sandwich = new SandwichVegetariano();
+                    break;
+                default:
+                    break;
+            };
+
+            sandwich.Preparar();
+
+            Console.ReadLine();
+        }
+
+        static void Composite()
+        {
+            Console.WriteLine("\n---------------- PATRÓN COMPOSITE ----------------\n");
+
+            Playlist reggaetonPlaylist = new Playlist("Reggaeton");
+            Playlist cumbiaPlaylist = new Playlist("Cumbia");
+            Playlist breshPlaylist = new Playlist("Bresh Noviembre");
+
+            Cancion cancion1 = new Cancion("La Jeepeta", "Nio Garcia");
+            Cancion cancion2 = new Cancion("Bichota", "Karol G");
+            Cancion cancion3 = new Cancion("Se te nota", "Lele Pons ft. Guaynaa");
+            Cancion cancion4 = new Cancion("Beso", "CNCO");
+
+            reggaetonPlaylist.Agregar(cancion1);
+            reggaetonPlaylist.Agregar(cancion2);
+            reggaetonPlaylist.Agregar(cancion3);
+            reggaetonPlaylist.Agregar(cancion4);
+
+
+            Cancion cancion5 = new Cancion("No te vayas", "Camilo");
+            Cancion cancion6 = new Cancion("Indeciso", "Reik ft. J Balvin");
+            Cancion cancion7 = new Cancion("Tirate un paso", "Los Wachiturros");
+            Cancion cancion8 = new Cancion("Llora, me llama", "Grupo Play");
+            Cancion cancion9 = new Cancion("No te creas tan importante", "Damas gratis");
+
+            cumbiaPlaylist.Agregar(cancion7);
+            cumbiaPlaylist.Agregar(cancion8);
+            cumbiaPlaylist.Agregar(cancion9);
+
+            breshPlaylist.Agregar(cancion1);
+            breshPlaylist.Agregar(reggaetonPlaylist);
+            breshPlaylist.Agregar(cancion5);
+            breshPlaylist.Agregar(cumbiaPlaylist);
+            breshPlaylist.Agregar(cancion6);
+
+            breshPlaylist.ObtenerDescripcion();
 
             Console.ReadLine();
         }

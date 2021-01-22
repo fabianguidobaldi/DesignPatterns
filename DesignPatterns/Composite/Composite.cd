@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="DesignPatterns.Composite.Cancion">
+    <Position X="2.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAAAAAAAgAAAAAAAAAAACAAAAAAAAAA=</HashCode>
+      <FileName>Composite\Cancion.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatterns.Composite.Componente" Collapsed="true">
+    <Position X="1.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQACAAAAAAAAEAAAAAAAAAAAAACAAAAAAAAAA=</HashCode>
+      <FileName>Composite\Componente.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPatterns.Composite.Playlist">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <AssociationLine Name="Canciones" Type="DesignPatterns.Composite.Componente" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="0.75" Y="1.75" />
+        <Point X="0.75" Y="0.75" />
+        <Point X="1.75" Y="0.75" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQACAAAAAAAAEAgAAAAAAAIAAACAAAAAAAAAA=</HashCode>
+      <FileName>Composite\Playlist.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="Canciones" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
